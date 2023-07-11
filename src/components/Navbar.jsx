@@ -36,12 +36,12 @@ const Navbar = () => {
             links.map(({ name, path, number }, index) => {
               return (
                 <li key={index}>
-                  <p
-                    // to={path}
+                  <NavLink
+                    to={path}
                     className={({ isActive }) => isActive ? 'active-nav' : ''}
                   >
                     <span aria-hidden="true">{number}</span> {name}
-                  </p>
+                  </NavLink>
                 </li>
               );
             })
