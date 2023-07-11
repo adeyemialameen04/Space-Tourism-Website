@@ -1,0 +1,124 @@
+.active-nav {
+  position: relative;
+}
+
+#nav {
+  background-color: red;
+}
+
+.active-nav::after {
+  content: '';
+  position: absolute;
+  background-color: var(--clr-white);
+  height: 3px;
+  width: 100%;
+  bottom: -10px;
+  left: 0;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.nav__container {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  margin: 2rem;
+  height: 2rem;
+}
+
+.nav__links {
+  background: hsl(0 0% 0% / 0.9);
+}
+
+.nav__btns {
+  display: none;
+}
+
+@supports (backdrop-filter: blur(1rem)) {
+  .nav__links {
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(1rem);
+  }
+}
+
+.nav__links li a {
+  text-decoration: none;
+  color: var(--clr-white);
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.nav__links li a>[aria-hidden="true"] {
+  font-weight: 800;
+  margin-inline-end: .75rem;
+}
+
+@media (max-width: 780px) {
+  .nav__links {
+    --gap: 2rem;
+    position: fixed;
+    inset: 0 0 0 30%;
+    padding: min(30vh, 10rem) 2rem;
+    flex-direction: column;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: all 450ms ease-in-out;
+  }
+
+  .show__nav {
+    transform: translateX(0%);
+  }
+
+  .nav__btns {
+    position: absolute;
+    aspect-ratio: 1/1;
+    font-size: 1.7rem;
+    top: 2rem;
+    right: 2rem;
+    z-index: 9999;
+    display: block;
+  }
+
+  .nav__btns button {
+    background-color: transparent;
+    color: var(--clr-white);
+    border: none;
+    transition: all 550ms ease-in-out;
+  }
+}
+
+@media (min-width: 780px) and (max-width: 1020px) {
+  .nav__links li a>[aria-hidden="true"] {
+    display: none;
+  }
+}
+
+@media (min-width:780px) {
+  .nav__links {
+    --gap: clamp(1.5rem, 5vw, 3rem);
+    padding-block: 1.5rem;
+    padding-inline: clamp(3rem, 10vw, 10rem);
+  }
+}
+
+@media (min-width:1200px) {
+  .nav__links li:nth-child(1) {
+    position: relative;
+  }
+
+  .nav__links li:nth-child(1)::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 400%;
+    background-color: var(--clr-somehow-gray);
+    left: -500%;
+    top: 50%;
+  }
+}
