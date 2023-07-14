@@ -1,0 +1,137 @@
+.destination__section {
+  background-image: url(/static/images/destination/background-destination-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 5rem;
+}
+
+.destination__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: red; */
+  padding-inline: 1rem;
+}
+
+.destination__img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.btn__container {
+  color: var(--clr-somehow-gray);
+  margin-top: 2.5rem;
+  display: flex;
+  font-size: 1.2rem;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+/* .btn__container */
+.destination__info-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.destination__info article {
+  color: var(--clr-white);
+  text-align: center;
+}
+
+.destination__info article p:nth-child(1) {
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.destination__info article>p:nth-child(2) {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--clr-somehow-gray);
+}
+
+.distance-travel-time {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.distance-travel-time div small {
+  color: var(--clr-somehow-gray);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.distance-travel-time div p {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+.job-btn.active-btn {
+  color: var(--clr-white);
+  position: relative;
+}
+
+.job-btn.active-btn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: -8px;
+  background-color: var(--clr-white);
+  left: 0;
+}
+
+@media (min-width: 780px) {
+  .destination__section {
+    background-image: url(/static/images/destination/background-destination-tablet.jpg);
+  }
+
+  .distance-travel-time {
+    flex-direction: row;
+  }
+}
+
+@media (min-width:1020px) {
+  .destination__section {
+    background-image: url(/static/images/destination/background-destination-desktop.jpg);
+  }
+
+  .destination__container {
+    flex-direction: row;
+    align-items: center;
+    padding-block: 5rem;
+  }
+
+  .destination__info-container {
+    align-items: start;
+  }
+
+  .destination__body {
+    width: 50%;
+  }
+
+  .destination__info-container {
+    width: 50%;
+  }
+
+  .destination__info article {
+    text-align: left;
+  }
+
+  .distance-travel-time {
+    justify-content: start;
+  }
+
+  .btn__container {
+    gap: 1.5rem;
+  }
+}
