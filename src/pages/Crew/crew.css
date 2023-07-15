@@ -1,0 +1,130 @@
+.crew__section {
+  background-image: url(/static/images/crew/background-crew-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 5rem;
+}
+
+.crew__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  color: #D0D6F9;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.crew__img img {
+  max-width: 60%;
+  /* padding-bottom: 0.2rem; */
+  margin: 0 auto;
+
+}
+
+.crew__info {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--clr-somehow-gray);
+}
+
+.circles__btn {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circles {
+  font-size: 1.3rem;
+  color: white;
+}
+
+.crew__info .crew {
+  text-align: center;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.crew__info .crew small {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: var(--clr-somehow-gray);
+  font-weight: 100;
+}
+
+.crew__info .crew h4 {
+  margin-top: 0.7rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.crew__info .crew p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+
+@media (min-width: 780px) {
+  .crew__section {
+    background-image: url(/static/images/crew/background-crew-tablet.jpg);
+  }
+
+  .crew__container {
+    padding-block: 3rem;
+  }
+
+  .crew__section>.title {
+    text-align-last: left;
+    padding-left: 6%;
+  }
+
+  .crew__img {
+    order: 2;
+  }
+
+  .crew__info {
+    border: none;
+    max-width: 500px;
+    margin-bottom: 3rem;
+  }
+
+  .crew__info .crew p {
+    font-size: 1rem;
+    font-weight: 200;
+  }
+
+}
+
+@media (min-width: 1020px) {
+  .crew__section {
+    background-image: url(/static/images/crew/background-crew-desktop.jpg);
+  }
+
+  .crew__section>.title {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  .crew__container {
+    flex-direction: row;
+    gap: 4rem;
+    padding-block: 2.5rem;
+  }
+
+  .crew__info .crew {
+    align-items: start;
+    text-align: left;
+    justify-content: space-between;
+  }
+
+  .circles__btn {
+    align-items: start;
+    justify-content: start;
+  }
+}
